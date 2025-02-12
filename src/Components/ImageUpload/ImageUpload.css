@@ -1,0 +1,27 @@
+.uploader-container {
+	background: var(--dark-teal);
+	border: solid 1px var(--light-teal);
+	border-radius: 32px;
+	width: 40%;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.uploaded {
+	background: none;
+    padding: 0.3rem;
+}
+
+.uploader-container img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain; /* Ensures the image scales while keeping aspect ratio */
+	border-radius: 16px; /* Optional: rounds the image corners */
+}

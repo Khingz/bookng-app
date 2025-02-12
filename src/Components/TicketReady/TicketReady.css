@@ -1,0 +1,65 @@
+.ticket-ready-container {
+	max-width: 40%;
+	margin: 0 auto;
+	background: var(--blackish-teal);
+	border: solid 1px var(--dark-teal);
+	padding: 2rem 3rem;
+	border-radius: 40px;
+}
+
+.ticket-ready-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	margin-top: 3rem;
+}
+.ticket-headeer-title {
+	text-align: center;
+}
+
+.ticket-headeer-title h3 {
+	font-size: 2rem;
+	font-weight: 400;
+	margin: 0;
+}
+
+.ticket-headeer-title p {
+	font-size: 1.2rem;
+	font-weight: 350;
+}
+
+.ticket-headeer-title p span {
+	font-weight: 800;
+}
+
+.ticket-body {
+	width: 60%;
+}
+
+.ticket-button {
+	display: flex;
+	justify-content: center;
+	margin: 2rem;
+	gap: 2rem;
+    width: 100%;
+}
+
+.ticket-button button {
+	border: solid 1px var(--light-teal);
+	background: var(--blackish-teal);
+	border-radius: 8px;
+	color: var(--light-teal);
+	padding: 1rem;
+	width: 100%;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: var(--light-teal);
+	font-family: "IBM Plex Serif", serif;
+}
+
+.ticket-button button.download-ticket {
+    background: var(--light-teal);
+    color: var(--white);
+}

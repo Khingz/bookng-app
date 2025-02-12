@@ -1,0 +1,28 @@
+.progress-bar {
+	width: 100%;
+	border-top: solid 2px var(--dark-teal);
+}
+
+.progress-bar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center	;
+}
+
+.progress-bar-header h4 {
+	font-size: 1.8rem;
+	font-weight: 300;
+	font-family: "IBM Plex Serif", serif;
+	margin: 0;
+}
+
+.progress-bar-header p {
+	font-family: "Roboto", serif;
+	font-size: 1.3rem;
+	word-spacing: 0.3rem;
+}
+
+.progress {
+	border-top: var(--light-teal) 2px solid;
+	margin-top: -2px;
+}

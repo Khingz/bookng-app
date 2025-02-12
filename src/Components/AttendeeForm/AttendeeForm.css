@@ -1,0 +1,87 @@
+.attendee-container {
+	max-width: 40%;
+	margin: 0 auto;
+	background: var(--blackish-teal);
+	border: solid 1px var(--dark-teal);
+	padding: 2rem 3rem;
+	border-radius: 40px;
+}
+
+.attendee-details {
+	max-width: 100%;
+	border: solid 1px var(--dark-teal);
+	margin: 0 auto;
+	background-color: #08252b;
+	border-radius: 32px;
+	border: solid 1px var(--dark-teal);
+	margin-top: 2rem;
+	/* padding: 2rem; */
+}
+
+.image-uploader-container {
+	background: #052228;
+	padding: 1rem;
+	border-radius: 24px;
+	border: solid 1px var(--light-teal);
+	margin: 2rem;
+}
+
+.image-uploader-container h3 {
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+.image-uploader {
+	background-color: var(--blackish-teal);
+	height: 200px;
+	margin: 4rem 0;
+	position: relative;
+}
+
+.image-uploader .uploader {
+	background: var(--dark-teal);
+	border: solid 1px var(--light-teal);
+	border-radius: 32px;
+	width: 40%;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.attendee-details .line-divider {
+	border: solid 2px var(--dark-teal);
+	padding: 0 2rem;
+	margin: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.attendee-details .button-section {
+	display: flex;
+	justify-content: center;
+	margin: 2rem;
+	gap: 2rem;
+}
+
+.attendee-details .button-section button {
+	border: solid 1px var(--light-teal);
+	background: var(--blackish-teal);
+	border-radius: 8px;
+	color: var(--light-teal);
+	padding: 1rem;
+	width: 100%;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: var(--light-teal);
+	font-family: "IBM Plex Serif", serif;
+}
+
+.attendee-details .button-section button.get-ticket {
+	background-color: var(--light-teal);
+	color: var(--white);
+}

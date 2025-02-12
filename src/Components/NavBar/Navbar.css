@@ -1,0 +1,60 @@
+nav.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 2rem;
+	width: 80%;
+	margin-top: 5rem;
+	border-radius: 24px;
+	border: solid 1px #197686;
+	font-family: "IBM Plex Serif", serif;
+	word-spacing: 4px;
+	font-weight: 300;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+	z-index: 100;
+}
+
+div.brand-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+ul.nav-link-list {
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+}
+
+ul.nav-link-list li {
+	list-style: none;
+}
+
+ul.nav-link-list li a {
+	text-decoration: none;
+	color: var(--white);
+	font-size: 1.2rem;
+}
+
+div.my-tickets-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+div.my-tickets-container button {
+	background-color: var(--white);
+	color: var(--background-color);
+	border: none;
+	padding: 1rem 1.5rem;
+	border-radius: 12px;
+	font-family: "IBM Plex Serif", serif;
+	font-size: 1rem;
+	font-weight: 300;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}

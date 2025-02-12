@@ -1,0 +1,88 @@
+.ticket-selection-container {
+	max-width: 40%;
+	margin: 0 auto;
+	background: var(--blackish-teal);
+	border: solid 1px var(--dark-teal);
+	padding: 2rem 3rem;
+	border-radius: 40px;
+}
+
+.ticket-selection-body {
+	max-width: 100%;
+	border: solid 1px var(--dark-teal);
+	margin: 0 auto;
+	background-color: #08252b;
+	border-radius: 32px;
+	border: solid 1px var(--dark-teal);
+	margin-top: 2rem;
+}
+
+.ticket-selection-body .header {
+	background: radial-gradient(
+			103.06% 57.39% at 14.02% 32.06%,
+			rgba(36, 160, 181, 0.2) 0%,
+			rgba(36, 160, 181, 0) 100%
+		),
+		rgba(10, 12, 17, 0.1);
+
+	padding: 1rem;
+	border-radius: 24px;
+	border: solid 1px var(--light-teal);
+	margin: 2rem;
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.ticket-selection-body .header img {
+	width: 50%;
+}
+
+.ticket-selection-body .header p {
+	width: 50%;
+	margin: 1rem auto;
+}
+
+.ticket-selection-body .details {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	gap: 2rem;
+}
+
+.ticket-selection-body .line-divider {
+	border: solid 2px var(--dark-teal);
+	padding: 0 2rem;
+	margin: 0 2rem;
+}
+
+.ticket-selection-body .body {
+	margin: 2rem 2rem 0 2rem;
+}
+
+.ticket-selection-body .button-section {
+	margin-bottom: 2rem;
+	padding: 0 2rem;
+	border-radius: 32px;
+	display: flex;
+	justify-content: space-around;
+	gap: 2rem;
+}
+
+.ticket-selection-body .button-section .cancel,
+.ticket-selection-body .button-section .continue {
+	border: solid 1px var(--light-teal);
+	background: var(--blackish-teal);
+	border-radius: 8px;
+	color: var(--light-teal);
+	padding: 1rem 4rem;
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: var(--light-teal);
+	font-family: "IBM Plex Serif", serif;
+	width: 100%;
+}
+
+.ticket-selection-body .button-section .continue {
+	background-color: var(--light-teal);
+	color: var(--white);
+}
