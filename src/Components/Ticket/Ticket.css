@@ -6,10 +6,6 @@
 
 .ticket-top-section {
 	max-width: 100%;
-	height: 500px;
-	background-color: aquamarine;
-	border: solid res 1px;
-	border-bottom: 2px dashed rgb(154, 204, 15);
 }
 
 .ticket-bottom-section {

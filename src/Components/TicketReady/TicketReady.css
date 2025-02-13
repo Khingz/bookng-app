@@ -72,7 +72,8 @@
 
 @media screen and (max-width: 940px) {
 	.ticket-ready-container {
-		max-width: 80%;
+		max-width: 95%;
+		padding: 2rem;
 	}
 
 	.ticket-body {

@@ -1,3 +1,4 @@
+import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx.jsx";
 import "./FormComponent.css";
 
 export const InputField = ({
@@ -5,6 +6,7 @@ export const InputField = ({
 	type = "text",
 	setValue,
 	icon,
+	error,
 	...props
 }) => (
 	<div className="input-container">
@@ -18,6 +20,9 @@ export const InputField = ({
 				onChange={(e) => setValue(e.target.value)}
 			/>
 		</div>
+		{error && (
+			<ErrorMessage error={error} />
+		)}
 	</div>
 );
 

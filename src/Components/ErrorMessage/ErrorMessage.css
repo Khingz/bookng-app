@@ -1,0 +1,20 @@
+.err-message {
+	width: 93%;
+	margin: 0 auto;
+	margin-top: -0.5rem;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	color: rgb(240, 92, 92);
+}
+
+.errorM {
+	position: relative;
+	top: -1.5rem;
+	color: rgb(240, 92, 92);
+}
+
+@media screen and (max-width: 940px) {
+	.err-message {
+		margin-top: -1.5rem;
+	}
+}

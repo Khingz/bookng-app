@@ -4,6 +4,7 @@ import ticketTitle from "../../Assets/Typography/Heading.png";
 import SelectTicketType from "../SelectTicketType/SelectTicketType";
 import TicketNumber from "../TicketNumber/TicketNumber";
 import { useState } from "react";
+import ErrorMessage, { ErrorM } from "../ErrorMessage/ErrorMessage.jsx";
 
 const TicketSelection = ({
 	step,
@@ -16,9 +17,16 @@ const TicketSelection = ({
 	tickets,
 }) => {
 	const [totalTickets, setTotalTickets] = useState(0);
+	const [errors, setErrors] = useState({});
 
 	const handleSubmit = () => {
-		if (ticketType && ticketNumber) {
+		const newErrors = {};
+
+		if (!ticketNumber) newErrors.ticketNumber = "Ticket Number is required";
+		if (!ticketType) newErrors.ticketType = "Ticket Type is required";
+
+		setErrors(newErrors);
+		if (Object.keys(newErrors).length === 0) {
 			setStep(step + 1);
 		}
 	};
@@ -48,6 +56,7 @@ const TicketSelection = ({
 						setTotalTickets={setTotalTickets}
 						tickets={tickets}
 					/>
+					{errors.ticketType && <ErrorM error={errors.ticketType} />}
 					<TicketNumber
 						availTickets={totalTickets}
 						setTicketNumber={setTicketNumber}
@@ -55,6 +64,11 @@ const TicketSelection = ({
 						ticketType={ticketType}
 						tickets={tickets}
 					/>
+					<div className="ticket-selection-error">
+						{errors.ticketNumber && (
+							<ErrorM error={errors.ticketNumber} />
+						)}
+					</div>
 				</div>
 				<div className="button-section">
 					<button className="cancel">Cancel</button>

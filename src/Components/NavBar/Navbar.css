@@ -62,6 +62,7 @@ div.my-tickets-container button {
 @media screen and (max-width: 940px) {
 	nav.nav-container {
 		margin-top: 2rem;
+		width: 80%;
 	}
 
 	ul.nav-link-list {

@@ -55,10 +55,6 @@
 	margin: 0 2rem;
 }
 
-.ticket-selection-body .body {
-	/* margin: 2rem 2rem 0 2rem; */
-}
-
 .ticket-selection-body .button-section {
 	margin-bottom: 2rem;
 	/* padding: 0 2rem; */
@@ -87,6 +83,11 @@
 	color: var(--white);
 }
 
+
+.ticket-select-container {
+	margin: 0
+}
+
 @media screen and (max-width: 1300px) {
 	.ticket-selection-container {
 		max-width: 60%;
@@ -100,7 +101,6 @@
 	}
 
 	.ticket-selection-body {
-
 		padding: 2rem 1rem;
 	}
 

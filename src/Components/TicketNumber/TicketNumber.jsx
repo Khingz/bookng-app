@@ -3,7 +3,6 @@ import "./TicketNumber.css";
 import { getAvailableTickets } from "../../utils/ticketHelper";
 
 const TicketNumber = ({
-	availTickets,
 	setTicketNumber,
 	ticketNumber,
 	tickets,

@@ -1,5 +1,6 @@
 .ticket-number-container {
 	margin-bottom: 2rem;
+	margin-top: 2rem;
 }
 
 .ticket-number-container label {
@@ -12,7 +13,7 @@
 .ticket-number-container select {
 	width: 100%;
 	padding: 1rem;
-	border: solid 1px var(--dark-teal);	
+	border: solid 1px var(--dark-teal);
 	background: var(--blackish-teal);
 	border-radius: 24px;
 	color: var(--white);
