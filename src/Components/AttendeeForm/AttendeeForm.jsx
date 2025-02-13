@@ -4,8 +4,7 @@ import "./AttendeeForm.css";
 import envelope from "../../Assets/Icons/envelop.png";
 import ImageUpload from "../ImageUpload/ImageUpload";
 import { useState } from "react";
-import { reduceTotalById } from "../../utils/ticketHelper";
-import { ticketOptions } from "../../utils/ticket";
+import { handleUpload } from "../../utils/cloudinary";
 
 const AttendeeForm = ({
 	step,
@@ -18,23 +17,28 @@ const AttendeeForm = ({
 	name,
 	email,
 	ticketType,
-	tickets,
 	setTickets,
-	ticketNumber
+	image,
+	ticketNumber,
 }) => {
 	const [imagePreview, setImagePreview] = useState(null);
+	const [imageFile, setImageFile] = useState(null);
+	const [uploading, setUploading] = useState(false);
 
 	const handleDrop = (acceptedFiles) => {
 		if (acceptedFiles.length > 0) {
 			const file = acceptedFiles[0];
 			const previewUrl = URL.createObjectURL(file);
 			setImagePreview(previewUrl);
-			setImage(file);
+			setImageFile(file);
 		}
 	};
 
-	const handleSubmit = (id, value) => {
+	const handleSubmit = async (id, value) => {
+		setUploading(true);
 		if (name && email) {
+			const imageUrl = await handleUpload(imageFile)
+			setImage(imageUrl)
 			setStep(step + 1);
 			setTickets((prevTickets) =>
 				prevTickets.map((ticket) =>
@@ -44,6 +48,7 @@ const AttendeeForm = ({
 				)
 			);
 		}
+		setUploading(false);
 	};
 
 	return (
@@ -64,7 +69,7 @@ const AttendeeForm = ({
 				</div>
 				<div className="line-divider"></div>
 
-				<div>
+				<form className="input-container">
 					<InputField label="Enter your name" type="text" setValue={setName} />
 					<InputField
 						label="Enter your Email*"
@@ -73,12 +78,15 @@ const AttendeeForm = ({
 						setValue={setEmail}
 					/>
 					<TextArea label="Special Request?" setValue={setSpecialRequest} />
-				</div>
+				</form>
 
 				<div className="button-section">
 					<button className="back">Back</button>
-					<button className="get-ticket" onClick={() => handleSubmit(ticketType, ticketNumber)}>
-						Get My Ticket
+					<button
+						className="get-ticket"
+						onClick={() => handleSubmit(ticketType, ticketNumber)}
+					>
+						{uploading ? "Loading..." : `Get My ${ticketType === "free" ? "Free" : ""} Ticket`}
 					</button>
 				</div>
 			</div>

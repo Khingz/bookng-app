@@ -15,6 +15,7 @@
 	border-radius: 32px;
 	border: solid 1px var(--dark-teal);
 	margin-top: 2rem;
+	padding: 2rem;
 }
 
 .ticket-selection-body .header {
@@ -28,7 +29,6 @@
 	padding: 1rem;
 	border-radius: 24px;
 	border: solid 1px var(--light-teal);
-	margin: 2rem;
 	padding: 2rem 1rem;
 	text-align: center;
 }
@@ -56,12 +56,12 @@
 }
 
 .ticket-selection-body .body {
-	margin: 2rem 2rem 0 2rem;
+	/* margin: 2rem 2rem 0 2rem; */
 }
 
 .ticket-selection-body .button-section {
 	margin-bottom: 2rem;
-	padding: 0 2rem;
+	/* padding: 0 2rem; */
 	border-radius: 32px;
 	display: flex;
 	justify-content: space-around;
@@ -93,11 +93,15 @@
 	}
 }
 
-
-
 @media screen and (max-width: 940px) {
 	.ticket-selection-container {
-		max-width: 80%;
+		max-width: 95%;
+		padding: 2rem 1rem;
+	}
+
+	.ticket-selection-body {
+
+		padding: 2rem 1rem;
 	}
 
 	.ticket-selection-body .header img {

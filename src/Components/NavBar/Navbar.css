@@ -59,8 +59,11 @@ div.my-tickets-container button {
 	gap: 0.5rem;
 }
 
-
 @media screen and (max-width: 940px) {
+	nav.nav-container {
+		margin-top: 2rem;
+	}
+
 	ul.nav-link-list {
 		display: none;
 	}

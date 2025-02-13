@@ -2,3 +2,10 @@
     padding-top: 13rem;
     padding-bottom: 8rem
 }
+
+@media screen and (max-width: 940px) {
+	.booking-container {
+        padding-top: 10rem;
+        padding-bottom: 3rem
+    }
+}

@@ -15,7 +15,6 @@
 	border-radius: 32px;
 	border: solid 1px var(--dark-teal);
 	margin-top: 2rem;
-	/* padding: 2rem; */
 }
 
 .image-uploader-container {
@@ -38,12 +37,15 @@
 	position: relative;
 }
 
-
 .attendee-details .line-divider {
 	border: solid 2px var(--dark-teal);
 	padding: 0 2rem;
-	margin: 0 2rem;
+	margin: 3rem 2rem 0 2rem;
 	margin-bottom: 3rem;
+}
+
+form.input-container {
+	margin: 0 auto;
 }
 
 .attendee-details .button-section {
@@ -79,7 +81,12 @@
 
 @media screen and (max-width: 940px) {
 	.attendee-container {
-		max-width: 80%;
+		max-width: 95%;
+		padding: 2rem 1rem;
+	}
+
+	.image-uploader-container {
+		margin: 1rem;
 	}
 
 	.image-uploader {

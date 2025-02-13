@@ -1,32 +1,19 @@
 import { useState } from "react";
 import "./Booking.css";
-import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 import TicketSelection from "../../Components/TicketSelection/TicketSelection";
 import AttendeeForm from "../../Components/AttendeeForm/AttendeeForm";
 import TicketReady from "../../Components/TicketReady/TicketReady";
 import { ticketOptions as initialTicketOptions } from "../../utils/ticket";
 
 const Booking = () => {
-	const [step, setStep] = useState(3);
-	const { image, setImage } = useState(null);
+	const [step, setStep] = useState(1);
+	const [ image, setImage ] = useState("");
 	const [name, setName] = useState("");
 	const [ticketNumber, setTicketNumber] = useState(0);
 	const [ticketType, setTicketType] = useState("");
-	const { specailRequest, setSpecialRequest } = useState("");
+	const [ specailRequest, setSpecialRequest ] = useState("");
 	const [email, setEmail] = useState("");
 	const [tickets, setTickets] = useState(initialTicketOptions);
-
-	// const handleAvailableTicketUpdate = (id, value) => {
-	// 	setTickets((prevTickets) =>
-	// 		prevTickets.map((ticket) =>
-	// 			ticket.id === id && ticket.ticketsLeft > value
-	// 				? { ...ticket, ticketsLeft: ticket.ticketsLeft - value } // Decrease count
-	// 				: ticket
-	// 		)
-	// 	);
-	// };
-	
-
 
 	const totalStep = 3;
 
@@ -41,8 +28,6 @@ const Booking = () => {
 					setStep={setStep}
 					ticketNumber={ticketNumber}
 					ticketType={ticketType}
-					// getAvailTickets={getAvailTickets}
-					// getTotalTickets={getTotalTickets}
 					tickets={tickets}
 				/>
 			)}
@@ -61,6 +46,7 @@ const Booking = () => {
 					tickets={tickets}
 					setTickets={setTickets}
 					ticketNumber={ticketNumber}
+					image={image}
 				/>
 			)}
 			{step === 3 && (
@@ -74,7 +60,6 @@ const Booking = () => {
 					ticketNumber={ticketNumber}
 					ticketType={ticketType}
 					setStep={setStep}
-
 				/>
 			)}
 		</div>
