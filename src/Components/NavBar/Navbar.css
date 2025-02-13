@@ -10,9 +10,9 @@ nav.nav-container {
 	font-family: "IBM Plex Serif", serif;
 	word-spacing: 4px;
 	font-weight: 300;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 100;
 }
 
@@ -57,4 +57,11 @@ div.my-tickets-container button {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+}
+
+
+@media screen and (max-width: 940px) {
+	ul.nav-link-list {
+		display: none;
+	}
 }

@@ -12,6 +12,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	padding: 1rem;
 }
 
 .uploaded {
@@ -24,4 +25,11 @@
 	max-height: 100%;
 	object-fit: contain; /* Ensures the image scales while keeping aspect ratio */
 	border-radius: 16px; /* Optional: rounds the image corners */
+}
+
+@media screen and (max-width: 940px) {
+	.uploader-container {
+		width: 80%;
+		height: 200px;
+	}
 }

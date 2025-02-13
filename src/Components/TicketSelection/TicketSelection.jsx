@@ -14,12 +14,8 @@ const TicketSelection = ({
 	ticketNumber,
 	ticketType,
 	tickets,
-	// getAvailTickets,
-	// getTotalTickets,
 }) => {
 	const [totalTickets, setTotalTickets] = useState(0);
-
-	console.log(tickets);
 
 	const handleSubmit = () => {
 		if (ticketType && ticketNumber) {
@@ -41,12 +37,9 @@ const TicketSelection = ({
 						Join us for an unforgettable experience Abuja! Secure your spot now.
 					</p>
 					<div className="details">
-						<p>
-							<img src="" alt="" srcset="" />
-							📍Abuja
-							<span>||</span>
-							July 20, 2025 | 7:00PM
-						</p>
+						<span>📍Abuja</span>
+						<span className="divider">||</span>
+						<span>July 20, 2025 | 7:00PM</span>
 					</div>
 				</div>
 				<div className="body">

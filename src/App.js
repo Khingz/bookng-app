@@ -6,7 +6,7 @@ import Booking from "./Pages/BookingForm/Booking";
 
 function App() {
 	return (
-		<div>
+		<div className="app-container">
 			<Router>
 				<Navbar />
 				<Routes>

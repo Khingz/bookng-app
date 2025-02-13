@@ -38,27 +38,12 @@
 	position: relative;
 }
 
-.image-uploader .uploader {
-	background: var(--dark-teal);
-	border: solid 1px var(--light-teal);
-	border-radius: 32px;
-	width: 40%;
-	height: 250px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
 
 .attendee-details .line-divider {
 	border: solid 2px var(--dark-teal);
 	padding: 0 2rem;
 	margin: 0 2rem;
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 .attendee-details .button-section {
@@ -84,4 +69,25 @@
 .attendee-details .button-section button.get-ticket {
 	background-color: var(--light-teal);
 	color: var(--white);
+}
+
+@media screen and (max-width: 1300px) {
+	.attendee-container {
+		max-width: 60%;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.attendee-container {
+		max-width: 80%;
+	}
+
+	.image-uploader {
+		background-color: transparent;
+	}
+
+	.attendee-details .button-section {
+		flex-direction: column;
+		gap: 1rem;
+	}
 }

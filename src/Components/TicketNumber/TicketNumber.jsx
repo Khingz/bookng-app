@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./TicketNumber.css";
+import { getAvailableTickets } from "../../utils/ticketHelper";
 
 const TicketNumber = ({
 	availTickets,
@@ -8,13 +9,6 @@ const TicketNumber = ({
 	tickets,
 	ticketType,
 }) => {
-	useEffect(() => {}, [availTickets]);
-
-	const getAvailTickets = (id) => {
-		const ticket = tickets.find((ticket) => ticket.id === id);
-		return ticket ? ticket.ticketsLeft : 0;
-	};
-
 	return (
 		<div className="ticket-number-container">
 			<label htmlFor="number-select">Number of Tickets:</label>
@@ -23,7 +17,7 @@ const TicketNumber = ({
 				value={ticketNumber}
 				onChange={(e) => setTicketNumber(Number(e.target.value))}
 			>
-				{[...Array(getAvailTickets(ticketType)).keys()].map((i) => (
+				{[...Array(getAvailableTickets(ticketType, tickets)).keys()].map((i) => (
 					<option key={i + 1} value={i + 1}>
 						{i + 1}
 					</option>

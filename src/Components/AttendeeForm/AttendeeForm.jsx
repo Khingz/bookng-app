@@ -36,11 +36,10 @@ const AttendeeForm = ({
 	const handleSubmit = (id, value) => {
 		if (name && email) {
 			setStep(step + 1);
-			reduceTotalById(ticketType);
 			setTickets((prevTickets) =>
 				prevTickets.map((ticket) =>
 					ticket.id === id && ticket.ticketsLeft > value
-						? { ...ticket, ticketsLeft: ticket.ticketsLeft - value } // Decrease count
+						? { ...ticket, ticketsLeft: ticket.ticketsLeft - value }
 						: ticket
 				)
 			);

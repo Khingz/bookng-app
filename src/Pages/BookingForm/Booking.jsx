@@ -7,7 +7,7 @@ import TicketReady from "../../Components/TicketReady/TicketReady";
 import { ticketOptions as initialTicketOptions } from "../../utils/ticket";
 
 const Booking = () => {
-	const [step, setStep] = useState(1);
+	const [step, setStep] = useState(3);
 	const { image, setImage } = useState(null);
 	const [name, setName] = useState("");
 	const [ticketNumber, setTicketNumber] = useState(0);

@@ -12,6 +12,6 @@ body {
 	min-height: 100vh;
 }
 
-.active {
-	color: red;
+.app-container {
+	padding: 0 1.5rem;
 }

@@ -12,14 +12,12 @@ const ImageUpload = ({ onDrop, preview }) => {
 		>
 			<input {...getInputProps()} />
 			{preview ? (
-				<img
-					src={preview}
-					alt="Preview"
-				/>
+				<img src={preview} alt="Preview" />
 			) : (
 				<div>
 					<img src={downloadIcon} alt="" srcset="" />
-					<p>Drag & drop an image or click to select</p></div>
+					<p>Drag & drop an image or click to select</p>
+				</div>
 			)}
 		</div>
 	);

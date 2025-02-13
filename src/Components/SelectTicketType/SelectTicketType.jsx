@@ -6,11 +6,8 @@ const SelectTicketType = ({
 	setTicketType,
 	setTotalTickets,
 	tickets
-	// getAvailTickets,
-	// getTotalTickets,
 }) => {
 	const [selected, setSelected] = useState(null);
-	console.log(tickets);
 	
 	const handleClick = (id) => {
 		setSelected(id);

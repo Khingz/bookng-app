@@ -6,7 +6,8 @@
 .progress-bar-header {
 	display: flex;
 	justify-content: space-between;
-	align-items: center	;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .progress-bar-header h4 {
@@ -25,4 +26,12 @@
 .progress {
 	border-top: var(--light-teal) 2px solid;
 	margin-top: -2px;
+}
+
+@media screen and (max-width: 500px) {
+	.progress-bar-header {
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+	}
 }
