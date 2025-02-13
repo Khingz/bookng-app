@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "./SelectTicketType.css";
 import { ticketOptions } from "../../utils/ticket";
+import { getFromLocalStorage, saveToLocalStorage } from "../../utils/localStroage";
 
 const SelectTicketType = ({
 	setTicketType,
 	setTotalTickets,
 	tickets
 }) => {
-	const [selected, setSelected] = useState(null);
+	const [selected, setSelected] = useState(getFromLocalStorage("ticketType") || "");
 	
 	const handleClick = (id) => {
 		setSelected(id);
 		setTicketType(id);
+		saveToLocalStorage("ticketType", id);
 	};
 
 	const getTotalTickets = (id) => {

@@ -6,6 +6,7 @@ import ImageUpload from "../ImageUpload/ImageUpload";
 import { useState } from "react";
 import { handleUpload } from "../../utils/cloudinary";
 import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
+import { saveToLocalStorage } from "../../utils/localStroage.js";
 
 const AttendeeForm = ({
 	step,
@@ -20,6 +21,7 @@ const AttendeeForm = ({
 	ticketType,
 	setTickets,
 	image,
+	specialRequest,
 	ticketNumber,
 }) => {
 	const [imagePreview, setImagePreview] = useState(null);
@@ -33,6 +35,25 @@ const AttendeeForm = ({
 			const previewUrl = URL.createObjectURL(file);
 			setImagePreview(previewUrl);
 			setImageFile(file);
+		}
+	};
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		saveToLocalStorage(name, value);
+
+		switch (name) {
+			case "name":
+				setName(value);
+				break;
+			case "email":
+				setEmail(value);
+				break;
+			case "specialRequest":
+				setSpecialRequest(value);
+				break;
+			default:
+				break;
 		}
 	};
 
@@ -52,6 +73,7 @@ const AttendeeForm = ({
 		setErrors(newErrors);
 		if (Object.keys(newErrors).length === 0) {
 			const imageUrl = await handleUpload(imageFile);
+			saveToLocalStorage("image", imageUrl);
 			setImage(imageUrl);
 			setStep(step + 1);
 			setTickets((prevTickets) =>
@@ -91,6 +113,9 @@ const AttendeeForm = ({
 						type="text"
 						setValue={setName}
 						error={errors.name}
+						name={"name"}
+						onChange={handleChange}
+						value={name}
 					/>
 					<InputField
 						label="Enter your Email*"
@@ -98,8 +123,17 @@ const AttendeeForm = ({
 						icon={envelope}
 						setValue={setEmail}
 						error={errors.email}
+						name={"email"}
+						onChange={handleChange}
+						value={email}
 					/>
-					<TextArea label="Special Request?" setValue={setSpecialRequest} />
+					<TextArea
+						label="Special Request?"
+						setValue={setSpecialRequest}
+						name={"specialRequest"}
+						onChange={handleChange}
+						value={specialRequest}
+					/>
 				</form>
 
 				<div className="button-section">

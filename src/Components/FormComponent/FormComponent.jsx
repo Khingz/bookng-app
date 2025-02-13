@@ -4,7 +4,7 @@ import "./FormComponent.css";
 export const InputField = ({
 	label,
 	type = "text",
-	setValue,
+	onChange,
 	icon,
 	error,
 	...props
@@ -17,7 +17,7 @@ export const InputField = ({
 				type={type}
 				className=""
 				{...props}
-				onChange={(e) => setValue(e.target.value)}
+				onChange={onChange}
 			/>
 		</div>
 		{error && (
@@ -26,14 +26,14 @@ export const InputField = ({
 	</div>
 );
 
-export const TextArea = ({ label, setValue, ...props }) => (
+export const TextArea = ({ label, setValue, onChange, ...props }) => (
 	<div className="textarea-field">
 		<label className="">{label}</label>
 		<div className="text-area">
 			<textarea
 				className=""
 				{...props}
-				onChange={(e) => setValue(e.target.value)}
+				onChange={onChange}
 			></textarea>
 		</div>
 	</div>

@@ -4,15 +4,16 @@ import TicketSelection from "../../Components/TicketSelection/TicketSelection";
 import AttendeeForm from "../../Components/AttendeeForm/AttendeeForm";
 import TicketReady from "../../Components/TicketReady/TicketReady";
 import { ticketOptions as initialTicketOptions } from "../../utils/ticket";
+import { getFromLocalStorage } from "../../utils/localStroage";
 
 const Booking = () => {
 	const [step, setStep] = useState(1);
-	const [ image, setImage ] = useState("");
-	const [name, setName] = useState("");
-	const [ticketNumber, setTicketNumber] = useState(0);
-	const [ticketType, setTicketType] = useState("");
-	const [ specailRequest, setSpecialRequest ] = useState("");
-	const [email, setEmail] = useState("");
+	const [ image, setImage ] = useState(getFromLocalStorage("image") || "");
+	const [name, setName] = useState(getFromLocalStorage("name") || "");
+	const [ticketNumber, setTicketNumber] = useState(getFromLocalStorage("ticketNumber") || 1);
+	const [ticketType, setTicketType] = useState(getFromLocalStorage("ticketType") || "");
+	const [ specailRequest, setSpecialRequest ] = useState(getFromLocalStorage("specialRequest") || "");
+	const [email, setEmail] = useState(getFromLocalStorage("email") || "");
 	const [tickets, setTickets] = useState(initialTicketOptions);
 
 	const totalStep = 3;
@@ -47,6 +48,7 @@ const Booking = () => {
 					setTickets={setTickets}
 					ticketNumber={ticketNumber}
 					image={image}
+					specialRequest={specailRequest}
 				/>
 			)}
 			{step === 3 && (
