@@ -65,9 +65,7 @@ const TicketSelection = ({
 						tickets={tickets}
 					/>
 					<div className="ticket-selection-error">
-						{errors.ticketNumber && (
-							<ErrorM error={errors.ticketNumber} />
-						)}
+						{errors.ticketNumber && <ErrorM error={errors.ticketNumber} />}
 					</div>
 				</div>
 				<div className="button-section">

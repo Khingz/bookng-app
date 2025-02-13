@@ -30,7 +30,6 @@ const TicketReady = ({
 			link.click();
 		}
 	};
-
 	return (
 		<div className="ticket-ready-container">
 			<ProgressBar step={step} totalStep={totalStep} stepTitle="Ready" />
@@ -41,9 +40,15 @@ const TicketReady = ({
 						Check your email for a copy or you can <span>download</span>
 					</p>
 				</div>
-				{name}
 				<div className="ticket-body" ref={captureRef}>
-					<Ticket />
+					<Ticket
+						name={name}
+						image={image}
+						ticketType={ticketType}
+						ticketNumber={ticketNumber}
+						specialRequest={specialRequest}
+						email={email}
+					/>
 				</div>
 				<div className="ticket-button">
 					<button className="book-new-ticket" onClick={handleNewBooking}>

@@ -44,7 +44,7 @@ const AttendeeForm = ({
 
 		if (!name.trim()) newErrors.name = "Name is required";
 		if (!email.trim()) newErrors.email = "Email is required";
-		if (!image) newErrors.image = "Image is required";
+		if (!imageFile) newErrors.image = "Image is required";
 
 		if (email && !regex.test(email)) {
 			newErrors.email = "Invalid email address";

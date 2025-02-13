@@ -36,6 +36,7 @@
 
 .ticket-body {
 	width: 60%;
+	background: black;
 }
 
 .ticket-button {
@@ -77,7 +78,7 @@
 	}
 
 	.ticket-body {
-		width: 90%;
+		width: 100%;
 	}
 
 	.ticket-button {

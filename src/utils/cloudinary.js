@@ -6,8 +6,6 @@ export const handleUpload = async (image) => {
 	const formData = new FormData();
 	formData.append("file", image);
 	formData.append("upload_preset", process.env.REACT_APP_CLOUDINARY_PRESET);
-  console.log(process.env.REACT_APP_CLOUDINARY_PRESET);
-  
 
 	try {
 		const res = await axios.post(
