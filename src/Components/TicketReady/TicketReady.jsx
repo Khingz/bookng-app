@@ -21,15 +21,38 @@ const TicketReady = ({
 	};
 
 	const handleDownload = async () => {
-		if (captureRef.current) {
-			const canvas = await html2canvas(captureRef.current);
+		if (!captureRef.current) return;
+		try {
+			const preloadImages = async (element) => {
+				const images = element.querySelectorAll("img");
+				await Promise.all(
+					[...images].map((img) =>
+						img.complete
+							? Promise.resolve()
+							: new Promise((resolve) => (img.onload = resolve))
+					)
+				);
+			};
+
+			await preloadImages(captureRef.current);
+
+			const canvas = await html2canvas(captureRef.current, {
+				useCORS: true,
+				backgroundColor: null,
+				scale: window.devicePixelRatio,
+			});
+
 			const image = canvas.toDataURL("image/png");
+
 			const link = document.createElement("a");
 			link.href = image;
 			link.download = `${name}_${ticketType}_ticket.png`;
 			link.click();
+		} catch (error) {
+			console.error("Error capturing image:", error);
 		}
 	};
+
 	return (
 		<div className="ticket-ready-container">
 			<ProgressBar step={step} totalStep={totalStep} stepTitle="Ready" />

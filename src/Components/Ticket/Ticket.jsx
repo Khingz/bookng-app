@@ -27,26 +27,22 @@ const Ticket = ({
 					</div>{" "}
 					<div className="details-container">
 						<div className="ticket-details">
-							<div class="grid-item top-left">
-								<div>
+							<div class="grid-item flex-top">
+								<div className="flex-items">
 									<p>Name</p>
 									<p>{name}</p>
 								</div>
-							</div>
-							<div class="grid-item top-right">
-								<div>
+								<div className="flex-items">
 									<p>Email</p>
 									<p>{email}</p>
 								</div>
 							</div>
-							<div class="grid-item bottom-left">
-								<div className="bottom-grid">
+							<div class="grid-item flex-bottom">
+								<div className="flex-items">
 									<p>Ticket Type</p>
 									<p>{ticketType}</p>
 								</div>
-							</div>
-							<div class="grid-item bottom-right">
-								<div className="bottom-grid">
+								<div className="flex-items">
 									<p>Ticket for</p>
 									<p>{ticketNumber}</p>
 								</div>
@@ -54,9 +50,7 @@ const Ticket = ({
 						</div>
 						<div className="special-request">
 							<p className="title">Special Request?</p>
-							<p>
-								{specialRequest || "Nill"}
-							</p>
+							<p>{specialRequest || "Nill"}</p>
 						</div>
 					</div>
 				</div>

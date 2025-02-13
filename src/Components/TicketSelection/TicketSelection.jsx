@@ -4,7 +4,7 @@ import ticketTitle from "../../Assets/Typography/Heading.png";
 import SelectTicketType from "../SelectTicketType/SelectTicketType";
 import TicketNumber from "../TicketNumber/TicketNumber";
 import { useState } from "react";
-import ErrorMessage, { ErrorM } from "../ErrorMessage/ErrorMessage.jsx";
+import { ErrorM } from "../ErrorMessage/ErrorMessage.jsx";
 
 const TicketSelection = ({
 	step,

@@ -7,7 +7,7 @@ import { ticketOptions as initialTicketOptions } from "../../utils/ticket";
 import { getFromLocalStorage } from "../../utils/localStroage";
 
 const Booking = () => {
-	const [step, setStep] = useState(1);
+	const [step, setStep] = useState(3);
 	const [ image, setImage ] = useState(getFromLocalStorage("image") || "");
 	const [name, setName] = useState(getFromLocalStorage("name") || "");
 	const [ticketNumber, setTicketNumber] = useState(getFromLocalStorage("ticketNumber") || 1);
