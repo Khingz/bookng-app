@@ -88,6 +88,10 @@ const AttendeeForm = ({
 		setUploading(false);
 	};
 
+	const handleBack = () => {
+		setStep(step - 1);
+	};
+
 	return (
 		<div className="attendee-container">
 			<ProgressBar
@@ -137,13 +141,15 @@ const AttendeeForm = ({
 				</form>
 
 				<div className="button-section">
-					<button className="back">Back</button>
+					<button className="back" onClick={handleBack}>
+						Back
+					</button>
 					<button
 						className="get-ticket"
 						onClick={() => handleSubmit(ticketType, ticketNumber)}
 					>
 						{uploading
-							? "Loading..."
+							? "Processing..."
 							: `Get My ${ticketType === "free" ? "Free" : ""} Ticket`}
 					</button>
 				</div>

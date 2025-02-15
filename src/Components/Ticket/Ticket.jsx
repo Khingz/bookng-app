@@ -30,17 +30,17 @@ const Ticket = ({
 							<div class="grid-item flex-top">
 								<div className="flex-items">
 									<p>Name</p>
-									<p>{name}</p>
+									<p>{name.length > 5 ? name.slice(0, 5) + "..." : name}</p>
 								</div>
 								<div className="flex-items">
 									<p>Email</p>
-									<p>{email}</p>
+									<p>{email.length > 5 ? email.slice(0, 7) + "..." : email}</p>
 								</div>
 							</div>
 							<div class="grid-item flex-bottom">
 								<div className="flex-items">
 									<p>Ticket Type</p>
-									<p>{ticketType}</p>
+									<p>{ticketType.toUpperCase()}</p>
 								</div>
 								<div className="flex-items">
 									<p>Ticket for</p>
